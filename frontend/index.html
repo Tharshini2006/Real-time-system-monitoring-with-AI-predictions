@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time System Monitoring with AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .alert {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>System Monitoring Dashboard </h1>
+
+<div class="card">
+
+    <div class="alert" id="alert"></div>
+
+    <div class="metrics">
+        <div id="cpu">CPU: --%</div>
+        <div id="ram">RAM: --%</div>
+        <div id="disk">Disk: --%</div>
+        <div id="predicted">Predicted CPU: --%</div>
+    </div>
+
+    <canvas id="usageChart"></canvas>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
